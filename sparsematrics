@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+// Function to print the sparse matrix
+void printSparseMatrix(vector<vector<int>>& sparseMatrix) {
+    for (int i = 0; i < sparseMatrix.size(); i++) {
+        for (int j = 0; j < sparseMatrix[0].size(); j++) {
+            cout << sparseMatrix[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+    // Initialize the sparse matrix
+    vector<vector<int>> sparseMatrix(4, vector<int>(5, 0));
+
+    // Insert the non-zero elements
+    sparseMatrix[0][2] = 3;
+    sparseMatrix[0][4] = 4;
+    sparseMatrix[1][2] = 5;
+    sparseMatrix[1][3] = 7;
+    sparseMatrix[3][1] = 2;
+    sparseMatrix[3][2] = 6;
+
+    // Print the sparse matrix
+    printSparseMatrix(sparseMatrix);
+
+    return 0;
+}
